@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VTM</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <section>
+        <!-- header design -->
+        <header class="header">
+            <div class="logo">
+                <img src="VTM.png" alt="Logo" />
+            </div>
+            <h6 class="title">VTM</h6>
+            
+            <!-- Barre de recherche -->
+            <div class="search-bar">
+                <input type="text" placeholder="Rechercher..." />
+                <button><i class="fas fa-search"></i></button>
+            </div>
+
+            <!-- Menu principal -->
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#">ACCUEIL</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">ÀPROPOS <i class="fas fa-caret-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#about">Historique</a></li>
+                            <li><a href="#team">Équipes</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">SERVICES <i class="fas fa-caret-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#services ">Formation en ligne</a></li>
+                            <li><a href="#">Ventes en ligne</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#contact">CONTACTS</a></li>
+                </ul>
+            </nav>
+
+            <!-- Icônes inscription et connexion -->
+            <div class="auth-buttons">
+                <button class="btn"><i class="fas fa-user-plus"></i> Inscription</button>
+                <button class="btn"><i class="fas fa-sign-in-alt"></i> Connexion</button>
+            </div>
+
+            <!-- Menu mobile -->
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i> <!-- Icône d'ouverture -->
+            </div>
+
+            <!-- Icône de fermeture du menu -->
+            <div class="menu-close" onclick="toggleMenu()">
+                <i class="fas fa-times"></i> <!-- Icône de fermeture -->
+            </div>
+        </header>
+    </section>
+
+ <!-- Conteneur du Chatbot -->
+ <div id="chatbot-container" class="chatbot-container">
+  <div id="chatbot-header" class="chatbot-header" onmousedown="startDrag(event)">
+      <span>VTM</span>
+      <button id="close-chatbot" onclick="closeChatbot()">×</button>
+  </div>
+  <div id="chatbot-messages" class="chatbot-messages">
+      <div class="message bot-message">
+          <p>Bonjour! Comment puis-je vous aider aujourd'hui?</p>
+          <p>salut</p>
+      </div>
+  </div>
+  <div class="chatbot-input">
+      <input type="text" id="user-input" placeholder="Écrivez votre message..." />
+      <button onclick="sendMessage()">Send</button>
+  </div>
+</div>
+
+<button id="open-chatbot" class="open-chatbot" onclick="openChatbot()">💬</button>
+    
+
+
+
+
+
+
+
+<!-- Section À propos -->
+<section class="about" id="about">
+    <div class="container">
+        <div class="about-content">
+            <div class="about-image">
+                <img src="LOGO 00.jpeg" alt="À propos de nous">
+            </div>
+            <div class="about-text">
+                <h2 class="about-title">Qui sommes-nous ?</h2>
+                <p class="about-description">
+                    Nous sommes une entreprise innovante qui transforme les idées en solutions exceptionnelles. Avec des années d'expérience dans notre domaine, nous mettons un point d'honneur à offrir des services de qualité et à dépasser les attentes de nos clients.
+                </p>
+                <p class="about-details">
+                    Notre mission chez VTM est de développer des solutions technologiques qui répodent aux besoins de le société moderne.En intégrant l'éducation et la formation dans notre projets, nous visons à renforcer les capacités techniques des juenes pratique du TALENTA à Madagascar. Nous croyons fermement que l'accès à la technologie ouvre des portes et opportunités pour un avenir durable et prospère.                </p>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <h3>3+</h3>
+                        <p>Années d'expérience</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>150+</h3>
+                        <p>Clients satisfaits</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>50+</h3>
+                        <p>Projets réussis</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<!-- Section Équipe -->
+<section class="team" id="team">
+    <div class="container">
+        <h2 class="section-title">NOTRE ÉQUIPES</h2>
+        <p class="section-description">Découvrez les membres talentueux de notre équipe, chacun avec une expertise unique qui fait notre force.</p>
+        <div class="team-grid">
+            <!-- Membre 1 -->
+            <div class="team-member">
+                <div class="team-member-img">
+                    <img src="VTM03.png" alt="Membre 1">
+                </div>
+                <div class="team-member-info">
+                    <h3 class="team-member-name">GERALD</h3>
+                    <p class="team-member-role">Administrateur de Business VTM</p>
+                    <p class="team-member-description">Gerald est la fondateur de notre entreprise et pilote notre vision avec passion et innovation.</p>
+                    <div class="team-member-social">
+                        <a href="VTM4.png" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61571632862958" class="blank"><i class="fab fa-facebook-f"></i></a>
+
+                        <a href="VTM5.png" target="_blank"><i class="fab fa-twitter"></i></a>
+                    </div>
+                    <a href="https://www.linkedin.com/in/alicedupont" class="btn-profile">Voir le profil</a>
+                </div>
+            </div>
+            <!-- Membre 2 -->
+            <div class="team-member">
+                <div class="team-member-img">
+                    <img src="VTM1.png" alt="Membre 2">
+                </div>
+                <div class="team-member-info">
+                    <h3 class="team-member-name">GERALD</h3>
+                    <p class="team-member-role">CTO & Lead Developer</p>
+                    <p class="team-member-description">Gerald est responsable des technologies avancées de l'entreprise, transformant nos idées en solutions innovantes.</p>
+                    <div class="team-member-social">
+                        <a href="https://www.linkedin.com/in/johnsmith" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://twitter.com/johnsmith" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61571632862958" class="blank"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                    <a href="https://www.linkedin.com/in/johnsmith" class="btn-profile">Voir le profil</a>
+                </div>
+            </div>
+            <!-- Membre 3 -->
+            <div class="team-member">
+                <div class="team-member-img">
+                    <img src="VTM6.jpg" alt="Membre 3">
+                </div>
+                <div class="team-member-info">
+                    <h3 class="team-member-name">TERESA</h3>
+                    <p class="team-member-role">Marketing Manager</p>
+                    <p class="team-member-description">Teresa orchestre nos stratégies marketing et fait rayonner notre marque à travers des campagnes percutantes.</p>
+                    <div class="team-member-social">
+                        <a href="https://www.linkedin.com/in/marielambert" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61571632862958" class="blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/marielambert" target="_blank"><i class="fab fa-twitter"></i></a>
+                    </div>
+                    <a href="https://www.linkedin.com/in/marielambert" class="btn-profile">Voir le profil</a>
+                </div>
+            </div>
+            <!-- Membre 4 -->
+            <div class="team-member">
+                <div class="team-member-img">
+                    <img src="VTM5.jpg" alt="Membre 4">
+                </div>
+                <div class="team-member-info">
+                    <h3 class="team-member-name">SITRAKA</h3>
+                    <p class="team-member-role"> Opérateur informatique</p>
+                    <p class="team-member-description">Sitraka est la responsable la sécurité informatique de notre entreprise.</p>
+                    <div class="team-member-social">
+                        <a href="https://www.linkedin.com/in/louisbernard" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61571632862958" class="blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/louisbernard" target="_blank"><i class="fab fa-twitter"></i></a>
+                    </div>
+                    <a href="https://www.linkedin.com/in/louisbernard" class="btn-profile">Voir le profil</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Section Services -->
+<section class="services" id="services">
+    <div class="container">
+        <h2 class="section-title">NOS FORMATION</h2>
+        <div class="services-grid">
+            <!-- Service 1 -->
+            <div class="service-card">
+                <div class="service-img">
+                    <img src="VTM07.jpg" alt="Service 1">
+                    <div class="service-logo">
+                        <img src="VTM07.jpg" alt="Logo Service 1">
+                    </div>
+                </div>
+                <h3 class="service-title">Service 1</h3>
+                <h4 class="service-subtitle">Description du service premium</h4>
+                <p class="service-description">Des solutions techniques avancées pour vos besoins professionnels.</p>
+                <div class="service-price">150.000 AR</div>
+                <button class="cta-button">Inscrire</button>
+            </div>
+            
+            <!-- Service 2 -->
+            <div class="service-card">
+                <div class="service-img">
+                    <img src="ft.jpeg" alt="Service 2">
+                    <div class="service-logo">
+                        <img src="fr.jpeg" alt="Logo Service 2">
+                    </div>
+                </div>
+                <h3 class="service-title">Service 2</h3>
+                <h4 class="service-subtitle">Service professionnel</h4>
+                <p class="service-description">Optimisation de votre stratégie d'affaires avec nos experts.</p>
+                <div class="service-price">80.000 AR</div>
+                <button class="cta-button">Inscrire</button>
+            </div>
+            
+            <!-- Service 3 -->
+            <div class="service-card">
+                <div class="service-img">
+                    <img src="fy.jpeg" alt="Service 3">
+                    <div class="service-logo">
+                        <img src="fy.jpeg" alt="Logo Service 3">
+                    </div>
+                </div>
+                <h3 class="service-title">Service 3</h3>
+                <h4 class="service-subtitle">Solutions digitales</h4>
+                <p class="service-description">Des solutions digitales innovantes pour votre transformation numérique.</p>
+                <div class="service-price">100.000 AR</div>
+                <button class="cta-button">Inscrire</button>
+            </div>
+            
+            <!-- Service 4 -->
+            <div class="service-card">
+                <div class="service-img">
+                    <img src="fi.jpeg" alt="Service 4">
+                    <div class="service-logo">
+                        <img src="fi.jpeg" alt="Logo Service 4">
+                    </div>
+                </div>
+                <h3 class="service-title">Service 4</h3>
+                <h4 class="service-subtitle">Analyse des données</h4>
+                <p class="service-description">Analyse des données pour optimiser votre prise de décision.</p>
+                <div class="service-price">200.000 AR</div>
+                <button class="cta-button">Inscrire</button>
+            </div>
+        </div>
+    
+</section>
+
+
+
+
+
+
+
+ <!-- Section Contact -->
+<section  id="contact" class="contact">
+        <div class="container">
+            <h2><span>CONTACTEZ</span>-NOUS!</h2>
+          <p></p>
+          <center>
+             <div class="form-container">
+              <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                  <label for="fullName"></i> </label>
+                  <input type="text" id="fullName" name="fullName" required placeholder="Votre nom et prénom">
+                </div>
+      
+                <div class="form-group">
+                  <label for="phone"></i> </label>
+                  <input type="tel" id="phone" name="phone" required placeholder="Votre numéro de téléphone">
+                </div>
+      
+                <div class="form-group">
+                  <label for="email"></i> </label>
+                  <input type="email" id="email" name="email" required placeholder="Votre email">
+                </div>
+      
+                <div class="form-group">
+                  <label for="subject"></i> </label>
+                  <input type="text" id="subject" name="subject" required placeholder=" Le sujet de votre message">
+                </div>
+      
+                <div class="form-group">
+                  <label for="message"></i></label>
+                  <textarea id="message" name="message" required placeholder="Votre message"></textarea>
+                </div>
+      
+                <button type="submit" class="submit-btn">Envoyer</button>
+              </form>
+            </div>
+        </center>
+    <p>.</p>
+        <center>
+        <div class="contact-options">
+            <div class="contact-item">
+                <a href="+261327764040" >  <i class="fas fa-phone-alt"></i>
+                <h3></h3>
+                <label>+ 261 32 77 640 40 </label>
+            </div>
+            <div class="contact-item">
+                <a href="vegatalentamadagascar@gmail.com" >   <i class="fas fa-envelope"></i>
+                <h3></h3>
+                <label></label>
+            </div>
+            <div class="contact-item">
+              <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3774.400137185151!2d47.558244076073194!3d-18.913674882257794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x21f07d1eeb5dfacb%3A0x6301d2c8067d006a!2sVTM!5e0!3m2!1sfr!2smg!4v1738863672961!5m2!1sfr!2smg" >   <i class="fas fa-map-marker-alt"></i></a></i>
+                <h3></h3>
+                <label>101, Antananarivo , Ankatso</label>
+            </div>
+    </div>
+</center>
+</section>
+
+    <footer class="footer"> 
+        <div class="footer-container">
+            <!-- Logo Section -->
+            <div class="footer-logo">
+                <h3>VTM</h3>
+                <p>Business international </p>
+            </div>
+    
+            <!-- Links Section -->
+            <div class="footer-links">
+                <h3>MENU</h3>
+                <ul>
+                    <li><a href="# ">ACCUEIL</a></li>
+                    <li><a href="#about">À PROPOS</a></li>
+                    <li><a href="#services ">SERVICES</a></li>
+                    <li><a href="#contact">CONTACTS</a></li>
+                    <li><a href="#">CONNEXION</a></li>
+                </ul>
+            </div>
+    
+            <!-- Social Media Section -->
+            <div class="footer-social">
+                <h3>Suivez-nous</h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=61571632862958" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://x.com/MVegatalenta" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/vtm1342?igsh=OWRkaDZrbDg2b2Jv" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="https://mg.linkedin.com/company/vega-talenta-madagascar" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="map-container">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3774.400137185151!2d47.558244076073194!3d-18.913674882257794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x21f07d1eeb5dfacb%3A0x6301d2c8067d006a!2sVTM!5e0!3m2!1sfr!2smg!4v1738863672961!5m2!1sfr!2smg" 
+                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        
+        <!-- Copyright Section -->
+        <div class="footer-bottom">
+            <h4>Copyright &copy;2025 VTM</h4>
+        </div>
+    </footer>
+
+
+   <script src="java.js"></script>
+</body>
+</html>
