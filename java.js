@@ -87,38 +87,4 @@
         document.removeEventListener('mousemove', dragChatbot);
         document.removeEventListener('mouseup', stopDrag);
     }
-// Fonction pour l'effet d'écriture automatique
-        function typeWriter(element, text, speed) {
-            let i = 0;
-            function type() {
-                if (i < text.length) {
-                    element.innerHTML += text.charAt(i);
-                    i++;
-                    setTimeout(type, speed);
-                }
-            }
-            type();
-        }
-
-        window.onload = function() {
-            const titleElements = document.querySelectorAll('.timeline-content h3');
-            const paragraphElements = document.querySelectorAll('.timeline-content p');
-
-            // Appliquer l'effet d'écriture automatique sur les titres
-            titleElements.forEach((element, index) => {
-                const text = element.textContent;
-                element.innerHTML = ''; // Vider le texte pour l'écrire lettre par lettre
-                typeWriter(element, text, 100); // 100ms entre chaque lettre
-            });
-
-            // Appliquer l'effet d'écriture automatique sur les paragraphes
-            paragraphElements.forEach((element, index) => {
-                const text = element.textContent;
-                element.innerHTML = ''; // Vider le texte pour l'écrire lettre par lettre
-                setTimeout(() => {
-                    typeWriter(element, text, 50); // 50ms entre chaque lettre
-                }, 500); // Délai de 500ms avant de commencer l'écriture du paragraphe
-            });
-        };
-
     
