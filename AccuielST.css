@@ -244,6 +244,67 @@ body::before, body::after, body::backdrop {
             }
           
             
+        .navbar ul li a i {
+            margin-right: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .navbar ul li a:hover i {
+            transform: rotate(360deg);
+        }
+
+        /* Tooltips */
+        .navbar ul li .tooltip {
+            visibility: hidden;
+            opacity: 0;
+            background-color: #060706;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 8px;
+            position: absolute;
+            z-index: 1;
+            bottom: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 4px 10px rgba(2, 119, 139, 0.4);
+            transition: opacity 0.3s ease, visibility 0.3s ease, bottom 0.3s ease;
+            width: 200px;
+            font-size: 14px;
+        }
+
+        .navbar ul li:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+            bottom: -55px; /* Légère élévation lors du survol */
+        }
+
+       
+        /* Quand le menu est ouvert */
+.navbar.active {
+  max-height: 500px; /* assez grand pour contenir tout le menu */
+  padding: 20px;
+}
+
+        /* Menu Hamburger */
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 25px;
+            background-color: transparent;
+            border: none;
+            padding: 5px;
+        }
+
+        .menu-toggle div {
+            background-color: #ffffff;
+            height: 4px;
+            width: 100%;
+            border-radius: 2px;
+        }
         .logo img {
             width: 40px;
             height: 40px;
