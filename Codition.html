@@ -1,0 +1,159 @@
+<!-- HTML -->
+<div id="modal-conditions" class="modal-overlay" aria-modal="true" role="dialog" aria-labelledby="modalTitle" aria-describedby="modalDesc">
+  <div class="modal-box">
+    <img src="https://cdn-icons-png.flaticon.com/512/565/565547.png" alt="Logo Conditions" class="modal-logo" />
+    <h2 id="modalTitle">Conditions d'utilisation <i class="fas fa-file-contract"></i></h2>
+    <p id="modalDesc">En accédant à ce site, vous acceptez nos <a href="/conditions" target="_blank" rel="noopener" class="modal-link">conditions générales d'utilisation</a> et notre <a href="/confidentialite" target="_blank" rel="noopener" class="modal-link">politique de confidentialité</a>.</p>
+    <button id="accept-btn" aria-label="Accepter les conditions">J'accepte <i class="fas fa-check-circle"></i></button>
+  </div>
+</div>
+
+<!-- CSS -->
+<style>
+  @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+  body.modal-open {
+    overflow: hidden;
+  }
+
+  #modal-conditions {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    animation: fadeInBg 0.6s ease forwards;
+  }
+
+  #modal-conditions.active {
+    display: flex;
+  }
+
+  .modal-box {
+    background: #0b1826;
+    padding: 30px 40px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 420px;
+    box-shadow: 0 0 25px #00e5ffcc;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #cfd8dc;
+    position: relative;
+    transform: translateY(-30px);
+    animation: slideIn 0.5s ease forwards;
+  }
+
+  .modal-logo {
+    width: 60px;
+    margin-bottom: 15px;
+    animation: rotateLogo 3s linear infinite;
+  }
+
+  .modal-box h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    letter-spacing: 1.2px;
+    color: #00bfff;
+  }
+
+  .modal-box h2 i {
+    margin-left: 8px;
+    color: #00e5ff;
+    animation: pulseIcon 2s infinite;
+  }
+
+  .modal-box p {
+    font-size: 16px;
+    color: #a0b0b9;
+    margin-bottom: 25px;
+    line-height: 1.5;
+  }
+
+  .modal-link {
+    color: #00bfff;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+  }
+  .modal-link:hover,
+  .modal-link:focus {
+    color: #00e5ff;
+  }
+
+  .modal-box button {
+    background-color: #00bfff;
+    border: none;
+    color: #001f3f;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 12px 28px;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 0 15px #00e5ffaa;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.35s ease, transform 0.3s ease, box-shadow 0.4s ease;
+  }
+  .modal-box button i {
+    font-size: 20px;
+    animation: bounceIcon 2s infinite;
+  }
+  .modal-box button:hover {
+    background-color: #0099cc;
+    box-shadow: 0 0 25px #00bfff;
+    transform: scale(1.05);
+  }
+  .modal-box button:focus {
+    outline: 2px solid #00e5ff;
+    outline-offset: 3px;
+  }
+
+  /* Animations */
+  @keyframes fadeInBg {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  @keyframes slideIn {
+    from {opacity: 0; transform: translateY(-30px);}
+    to {opacity: 1; transform: translateY(0);}
+  }
+  @keyframes rotateLogo {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+  }
+  @keyframes pulseIcon {
+    0%, 100% {opacity: 1;}
+    50% {opacity: 0.5;}
+  }
+  @keyframes bounceIcon {
+    0%, 100% {transform: translateY(0);}
+    50% {transform: translateY(-6px);}
+  }
+</style>
+
+<!-- JS -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('modal-conditions');
+    const acceptBtn = document.getElementById('accept-btn');
+
+    // Vérifie si déjà accepté dans localStorage
+    if(localStorage.getItem('conditionsAccepted') === 'true') {
+      modal.style.display = 'none';
+      document.body.classList.remove('modal-open');
+      return; // Ne rien faire
+    }
+
+    // Sinon afficher modal
+    modal.classList.add('active');
+    document.body.classList.add('modal-open');
+
+    acceptBtn.addEventListener('click', () => {
+      localStorage.setItem('conditionsAccepted', 'true');
+      modal.classList.remove('active');
+      document.body.classList.remove('modal-open');
+    });
+  });
+</script>

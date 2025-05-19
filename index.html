@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VEGA TALENTA MADAGASCAR</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="AccuielST.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+
+
+
+  <!-- Section Header -->
+   <header class="header">
+    <div class="logo">
+        <img src="L.jpg" alt="Hacking Logo">
+    </div>
+    <nav class="navbar">
+        <ul>
+            <li>
+                <a href="#hacking"><i class="fas fa-user-shield"></i> Hacking Éthique</a>
+                <div class="tooltip">Apprenez les techniques de hacking dans un cadre légal.</div>
+            </li>
+             <li>
+                <a href="#outils"><i class="fas fa-toolbox"></i> Outils</a>
+                <div class="tooltip">Découvrez les outils utilisés par les professionnels.</div>
+            </li>
+            <li>
+                <a href="#formation"><i class="fas fa-graduation-cap"></i> Formations</a>
+                <div class="tooltip">Formations complètes sur la cybersécurité.</div>
+            </li>
+            <li>
+                <a href="apropos.html"><i class="fas fa-info-circle"></i> À Propos</a>
+                <div class="tooltip">En savoir plus sur notre mission et notre équipe.</div>
+            </li>
+             <li>
+                <a href="#services"><i class="fas fa-cogs"></i> Nos Services</a>
+                <div class="tooltip">Nos services de cybersécurité à la pointe de la technologie.</div>
+            </li>
+            <li>
+                <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+                <div class="tooltip">Contactez-nous pour plus d'informations.</div>
+            </li>
+           
+           
+        </ul>
+    </nav>
+    <!-- Barre de recherche responsive pro -->
+<form class="smart-search" action="accueil.html" method="GET">
+    <i class="fas fa-search search-icon"></i>
+    <input type="text" name="q" class="search-input" placeholder="Rechercher...">
+    <button type="submit" class="search-btn">GO</button>
+</form>
+<a href="connexion.html" class="profile-link" title="Se connecter">
+  <i class="fas fa-user-circle"></i>
+</a>
+   
+    <button class="menu-toggle" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </button>
+</header>
+
+
+  <section>
+   
+    <div class="auth-buttons">
+      <button aria-label="Connexion Google"><i class="fab fa-google"></i> Connexion Google</button>
+      <button aria-label="Connexion Facebook"><i class="fab fa-facebook"></i> Connexion Facebook</button>
+      <button aria-label="S'inscrire"><i class="fas fa-user-plus"></i> S'inscrire</button>
+    </div>
+    <div class="links" aria-label="Liens vers sites web">
+      <a href="https://github.com" target="_blank" title="GitHub" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://stackoverflow.com" target="_blank" title="Stack Overflow" aria-label="Stack Overflow"><i class="fab fa-stack-overflow"></i></a>
+      <a href="https://www.linkedin.com" target="_blank" title="LinkedIn" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href
+      href="https://www.youtube.com" target="_blank" title="YouTube" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.reddit.com" target="_blank" title="Reddit" aria-label="Reddit"><i class="fab fa-reddit"></i></a>
+    </div>
+     <h1 id="title" aria-live="polite">VTM</h1>
+  </section>
+
+  <section id="blog" aria-label="Articles de blog hacker pro">
+    <h2 class="section-title">ARTICLES RECENTS </h2>
+    <div id="articleContainer" tabindex="0" aria-live="polite" aria-atomic="true">
+      <!-- Articles injectés en JS -->
+    </div>
+    <button id="prevBtn" aria-label="Article précédent"><i class="fas fa-chevron-left"></i></button>
+    <button id="nextBtn" aria-label="Article suivant"><i class="fas fa-chevron-right"></i></button>
+  </section>
+
+  <!-- Modale article -->
+  <div id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDesc">
+    <div class="modal-content">
+      <span class="close" role="button" tabindex="0" aria-label="Fermer la fenêtre modale">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <img id="modalImg" src="" alt="" />
+      <p id="modalDesc"></p>
+    </div>
+  </div>
+<script src="ScriptAC.js"></script>
+
+
+
+<!-- FOOTER HACKING PRO -->
+<footer class="footer">
+    <div class="footer-container">
+      
+      <!-- Col 1: Présentation -->
+      <div class="footer-col">
+        <h3><span class="footer-logo">V</span> VTM</h3>
+        <p>
+          Plateforme de cybersécurité spécialisée dans le hacking éthique, le pentest, les CTFs, les formations en ligne, et la sensibilisation à la sécurité informatique.
+        </p>
+      </div>
+  
+      <!-- Col 2: Liens utiles -->
+      <div class="footer-col">
+        <h4>Liens Utiles</h4>
+        <ul>
+          <li><a href="#">Accueil</a></li>
+          <li><a href="#">Formations</a></li>
+          <li><a href="#">CTF Live</a></li>
+          <li><a href="#">Blog Sécurité</a></li>
+          <li><a href="#">Téléchargements</a></li>
+        </ul>
+      </div>
+  
+      <!-- Col 3: Ressources -->
+      <div class="footer-col">
+        <h4>Ressources</h4>
+        <ul>
+          <li><a href="#">Docs & Outils</a></li>
+          <li><a href="#">Linux & Terminal</a></li>
+          <li><a href="#">API publiques</a></li>
+          <li><a href="#">Réseaux anonymes</a></li>
+          <li><a href="#">Mentions légales</a></li>
+        </ul>
+      </div>
+  
+      <!-- Col 4: Contact -->
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><i class="fas fa-envelope"></i> vegatalentamadagascar@gmail.com</li>
+          <li><i class="fas fa-phone"></i> +261 32 77 640 40</li>
+          <li><i class="fas fa-map-marker-alt"></i> Antananarivo, Madagascar</li>
+        </ul>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-discord"></i></a>
+          <a href="#"><i class="fab fa-telegram"></i></a>
+        </div>
+      </div>
+    </div>
+     
+<!-- Font Awesome pour icônes -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 VTM | Tous droits réservés | </p>
+    </div>
+  </footer>
+
+  </body>
+</html>
