@@ -1,0 +1,82 @@
+
+
+/* ======= Section Projets ======= */
+.projects {
+  padding: 60px 0;
+  background: #011424;
+}
+
+.projects .section-title {
+  
+  margin-bottom: 40px;
+}
+
+.project-card {
+  background: #012333;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.project-img img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.project-content {
+  padding: 20px;
+}
+
+.project-content h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #f8f8f8;
+}
+
+.project-content i {
+  color: #007bff;
+  font-size: 22px;
+}
+
+.project-content p {
+  font-size: 15px;
+  color: #bebdbd;
+  line-height: 1.6;
+}
+
+/* Responsive Grid */
+.projects .row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* Animation fade-in (optionnel) */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.project-card {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
